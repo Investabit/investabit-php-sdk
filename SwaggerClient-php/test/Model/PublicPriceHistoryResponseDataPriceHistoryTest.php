@@ -1,6 +1,6 @@
 <?php
 /**
- * DefaultResponseTest
+ * PublicPriceHistoryResponseDataPriceHistoryTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * DefaultResponseTest Class Doc Comment
+ * PublicPriceHistoryResponseDataPriceHistoryTest Class Doc Comment
  *
  * @category    Class
- * @description DefaultResponse
+ * @description PublicPriceHistoryResponseDataPriceHistory
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DefaultResponseTest extends \PHPUnit_Framework_TestCase
+class PublicPriceHistoryResponseDataPriceHistoryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,30 @@ class DefaultResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DefaultResponse"
+     * Test "PublicPriceHistoryResponseDataPriceHistory"
      */
-    public function testDefaultResponse()
+    public function testPublicPriceHistoryResponseDataPriceHistory()
     {
     }
 
     /**
-     * Test attribute "success"
+     * Test attribute "symbol"
      */
-    public function testPropertySuccess()
+    public function testPropertySymbol()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "name"
      */
-    public function testPropertyCode()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "history"
      */
-    public function testPropertyStatus()
-    {
-    }
-
-    /**
-     * Test attribute "errors"
-     */
-    public function testPropertyErrors()
+    public function testPropertyHistory()
     {
     }
 }

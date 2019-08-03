@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicCurrentResponse
+ * PublicPriceHistoryResponseDataHistory
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicCurrentResponse Class Doc Comment
+ * PublicPriceHistoryResponseDataHistory Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicCurrentResponse implements ModelInterface, ArrayAccess
+class PublicPriceHistoryResponseDataHistory implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Current Response';
+    protected static $swaggerModelName = 'Public Price History Response_data_history';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'success' => 'bool',
-        'code' => 'int',
-        'status' => 'string',
-        'data' => '\Swagger\Client\Model\PublicCurrentResponseData',
-        'errors' => 'object[]'
+        'time' => 'float',
+        'price' => 'float'
     ];
 
     /**
@@ -70,11 +67,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'success' => null,
-        'code' => null,
-        'status' => null,
-        'data' => null,
-        'errors' => null
+        'time' => null,
+        'price' => null
     ];
 
     /**
@@ -104,11 +98,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'success' => 'success',
-        'code' => 'code',
-        'status' => 'status',
-        'data' => 'data',
-        'errors' => 'errors'
+        'time' => 'time',
+        'price' => 'price'
     ];
 
     /**
@@ -117,11 +108,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'success' => 'setSuccess',
-        'code' => 'setCode',
-        'status' => 'setStatus',
-        'data' => 'setData',
-        'errors' => 'setErrors'
+        'time' => 'setTime',
+        'price' => 'setPrice'
     ];
 
     /**
@@ -130,11 +118,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'success' => 'getSuccess',
-        'code' => 'getCode',
-        'status' => 'getStatus',
-        'data' => 'getData',
-        'errors' => 'getErrors'
+        'time' => 'getTime',
+        'price' => 'getPrice'
     ];
 
     /**
@@ -197,11 +182,8 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['time'] = isset($data['time']) ? $data['time'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
     }
 
     /**
@@ -213,17 +195,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['success'] === null) {
-            $invalidProperties[] = "'success' can't be null";
+        if ($this->container['time'] === null) {
+            $invalidProperties[] = "'time' can't be null";
         }
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
-        }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
-        }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['price'] === null) {
+            $invalidProperties[] = "'price' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,121 +217,49 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets success
+     * Gets time
      *
-     * @return bool
+     * @return float
      */
-    public function getSuccess()
+    public function getTime()
     {
-        return $this->container['success'];
+        return $this->container['time'];
     }
 
     /**
-     * Sets success
+     * Sets time
      *
-     * @param bool $success success
+     * @param float $time time
      *
      * @return $this
      */
-    public function setSuccess($success)
+    public function setTime($time)
     {
-        $this->container['success'] = $success;
+        $this->container['time'] = $time;
 
         return $this;
     }
 
     /**
-     * Gets code
+     * Gets price
      *
-     * @return int
+     * @return float
      */
-    public function getCode()
+    public function getPrice()
     {
-        return $this->container['code'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets code
+     * Sets price
      *
-     * @param int $code code
+     * @param float $price price
      *
      * @return $this
      */
-    public function setCode($code)
+    public function setPrice($price)
     {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
-     *
-     * @return string
-     */
-    public function getStatus()
-    {
-        return $this->container['status'];
-    }
-
-    /**
-     * Sets status
-     *
-     * @param string $status status
-     *
-     * @return $this
-     */
-    public function setStatus($status)
-    {
-        $this->container['status'] = $status;
-
-        return $this;
-    }
-
-    /**
-     * Gets data
-     *
-     * @return \Swagger\Client\Model\PublicCurrentResponseData
-     */
-    public function getData()
-    {
-        return $this->container['data'];
-    }
-
-    /**
-     * Sets data
-     *
-     * @param \Swagger\Client\Model\PublicCurrentResponseData $data data
-     *
-     * @return $this
-     */
-    public function setData($data)
-    {
-        $this->container['data'] = $data;
-
-        return $this;
-    }
-
-    /**
-     * Gets errors
-     *
-     * @return object[]
-     */
-    public function getErrors()
-    {
-        return $this->container['errors'];
-    }
-
-    /**
-     * Sets errors
-     *
-     * @param object[] $errors errors
-     *
-     * @return $this
-     */
-    public function setErrors($errors)
-    {
-        $this->container['errors'] = $errors;
+        $this->container['price'] = $price;
 
         return $this;
     }

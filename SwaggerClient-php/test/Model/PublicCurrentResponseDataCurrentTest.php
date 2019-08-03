@@ -1,6 +1,6 @@
 <?php
 /**
- * DefaultResponseTest
+ * PublicCurrentResponseDataCurrentTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * DefaultResponseTest Class Doc Comment
+ * PublicCurrentResponseDataCurrentTest Class Doc Comment
  *
  * @category    Class
- * @description DefaultResponse
+ * @description PublicCurrentResponseDataCurrent
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class DefaultResponseTest extends \PHPUnit_Framework_TestCase
+class PublicCurrentResponseDataCurrentTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,37 +70,44 @@ class DefaultResponseTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "DefaultResponse"
+     * Test "PublicCurrentResponseDataCurrent"
      */
-    public function testDefaultResponse()
+    public function testPublicCurrentResponseDataCurrent()
     {
     }
 
     /**
-     * Test attribute "success"
+     * Test attribute "symbol"
      */
-    public function testPropertySuccess()
+    public function testPropertySymbol()
     {
     }
 
     /**
-     * Test attribute "code"
+     * Test attribute "name"
      */
-    public function testPropertyCode()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "status"
+     * Test attribute "price"
      */
-    public function testPropertyStatus()
+    public function testPropertyPrice()
     {
     }
 
     /**
-     * Test attribute "errors"
+     * Test attribute "change_usd"
      */
-    public function testPropertyErrors()
+    public function testPropertyChangeUsd()
+    {
+    }
+
+    /**
+     * Test attribute "change_pct"
+     */
+    public function testPropertyChangePct()
     {
     }
 }

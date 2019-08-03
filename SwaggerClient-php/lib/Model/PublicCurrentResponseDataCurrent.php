@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicCurrentResponse
+ * PublicCurrentResponseDataCurrent
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicCurrentResponse Class Doc Comment
+ * PublicCurrentResponseDataCurrent Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicCurrentResponse implements ModelInterface, ArrayAccess
+class PublicCurrentResponseDataCurrent implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Current Response';
+    protected static $swaggerModelName = 'Public Current Response_data_current';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'success' => 'bool',
-        'code' => 'int',
-        'status' => 'string',
-        'data' => '\Swagger\Client\Model\PublicCurrentResponseData',
-        'errors' => 'object[]'
+        'symbol' => 'string',
+        'name' => 'string',
+        'price' => 'float',
+        'change_usd' => 'float',
+        'change_pct' => 'float'
     ];
 
     /**
@@ -70,11 +70,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'success' => null,
-        'code' => null,
-        'status' => null,
-        'data' => null,
-        'errors' => null
+        'symbol' => null,
+        'name' => null,
+        'price' => null,
+        'change_usd' => null,
+        'change_pct' => null
     ];
 
     /**
@@ -104,11 +104,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'success' => 'success',
-        'code' => 'code',
-        'status' => 'status',
-        'data' => 'data',
-        'errors' => 'errors'
+        'symbol' => 'symbol',
+        'name' => 'name',
+        'price' => 'price',
+        'change_usd' => 'change_usd',
+        'change_pct' => 'change_pct'
     ];
 
     /**
@@ -117,11 +117,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'success' => 'setSuccess',
-        'code' => 'setCode',
-        'status' => 'setStatus',
-        'data' => 'setData',
-        'errors' => 'setErrors'
+        'symbol' => 'setSymbol',
+        'name' => 'setName',
+        'price' => 'setPrice',
+        'change_usd' => 'setChangeUsd',
+        'change_pct' => 'setChangePct'
     ];
 
     /**
@@ -130,11 +130,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'success' => 'getSuccess',
-        'code' => 'getCode',
-        'status' => 'getStatus',
-        'data' => 'getData',
-        'errors' => 'getErrors'
+        'symbol' => 'getSymbol',
+        'name' => 'getName',
+        'price' => 'getPrice',
+        'change_usd' => 'getChangeUsd',
+        'change_pct' => 'getChangePct'
     ];
 
     /**
@@ -197,11 +197,11 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['symbol'] = isset($data['symbol']) ? $data['symbol'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['price'] = isset($data['price']) ? $data['price'] : null;
+        $this->container['change_usd'] = isset($data['change_usd']) ? $data['change_usd'] : null;
+        $this->container['change_pct'] = isset($data['change_pct']) ? $data['change_pct'] : null;
     }
 
     /**
@@ -213,17 +213,20 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['success'] === null) {
-            $invalidProperties[] = "'success' can't be null";
+        if ($this->container['symbol'] === null) {
+            $invalidProperties[] = "'symbol' can't be null";
         }
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
+        if ($this->container['name'] === null) {
+            $invalidProperties[] = "'name' can't be null";
         }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+        if ($this->container['price'] === null) {
+            $invalidProperties[] = "'price' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['change_usd'] === null) {
+            $invalidProperties[] = "'change_usd' can't be null";
+        }
+        if ($this->container['change_pct'] === null) {
+            $invalidProperties[] = "'change_pct' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,121 +244,121 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets success
-     *
-     * @return bool
-     */
-    public function getSuccess()
-    {
-        return $this->container['success'];
-    }
-
-    /**
-     * Sets success
-     *
-     * @param bool $success success
-     *
-     * @return $this
-     */
-    public function setSuccess($success)
-    {
-        $this->container['success'] = $success;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
+     * Gets symbol
      *
      * @return string
      */
-    public function getStatus()
+    public function getSymbol()
     {
-        return $this->container['status'];
+        return $this->container['symbol'];
     }
 
     /**
-     * Sets status
+     * Sets symbol
      *
-     * @param string $status status
+     * @param string $symbol symbol
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setSymbol($symbol)
     {
-        $this->container['status'] = $status;
+        $this->container['symbol'] = $symbol;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets name
      *
-     * @return \Swagger\Client\Model\PublicCurrentResponseData
+     * @return string
      */
-    public function getData()
+    public function getName()
     {
-        return $this->container['data'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets data
+     * Sets name
      *
-     * @param \Swagger\Client\Model\PublicCurrentResponseData $data data
+     * @param string $name name
      *
      * @return $this
      */
-    public function setData($data)
+    public function setName($name)
     {
-        $this->container['data'] = $data;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets price
      *
-     * @return object[]
+     * @return float
      */
-    public function getErrors()
+    public function getPrice()
     {
-        return $this->container['errors'];
+        return $this->container['price'];
     }
 
     /**
-     * Sets errors
+     * Sets price
      *
-     * @param object[] $errors errors
+     * @param float $price price
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setPrice($price)
     {
-        $this->container['errors'] = $errors;
+        $this->container['price'] = $price;
+
+        return $this;
+    }
+
+    /**
+     * Gets change_usd
+     *
+     * @return float
+     */
+    public function getChangeUsd()
+    {
+        return $this->container['change_usd'];
+    }
+
+    /**
+     * Sets change_usd
+     *
+     * @param float $change_usd change_usd
+     *
+     * @return $this
+     */
+    public function setChangeUsd($change_usd)
+    {
+        $this->container['change_usd'] = $change_usd;
+
+        return $this;
+    }
+
+    /**
+     * Gets change_pct
+     *
+     * @return float
+     */
+    public function getChangePct()
+    {
+        return $this->container['change_pct'];
+    }
+
+    /**
+     * Sets change_pct
+     *
+     * @param float $change_pct change_pct
+     *
+     * @return $this
+     */
+    public function setChangePct($change_pct)
+    {
+        $this->container['change_pct'] = $change_pct;
 
         return $this;
     }

@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicCurrentResponse
+ * PublicPriceChangeResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicCurrentResponse Class Doc Comment
+ * PublicPriceChangeResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicCurrentResponse implements ModelInterface, ArrayAccess
+class PublicPriceChangeResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Current Response';
+    protected static $swaggerModelName = 'Public Price Change Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -60,7 +60,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
         'success' => 'bool',
         'code' => 'int',
         'status' => 'string',
-        'data' => '\Swagger\Client\Model\PublicCurrentResponseData',
+        'data' => '\Swagger\Client\Model\PublicPriceChangeResponseData',
         'errors' => 'object[]'
     ];
 
@@ -315,7 +315,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
     /**
      * Gets data
      *
-     * @return \Swagger\Client\Model\PublicCurrentResponseData
+     * @return \Swagger\Client\Model\PublicPriceChangeResponseData
      */
     public function getData()
     {
@@ -325,7 +325,7 @@ class PublicCurrentResponse implements ModelInterface, ArrayAccess
     /**
      * Sets data
      *
-     * @param \Swagger\Client\Model\PublicCurrentResponseData $data data
+     * @param \Swagger\Client\Model\PublicPriceChangeResponseData $data data
      *
      * @return $this
      */
