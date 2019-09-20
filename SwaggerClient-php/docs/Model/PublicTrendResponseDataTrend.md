@@ -3,6 +3,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**time_start** | **float** |  | 
+**time_end** | **float** |  | 
 **interval** | **string** |  | 
 **weighted_price** | **float** |  | 
 **change_usd** | **float** |  | 

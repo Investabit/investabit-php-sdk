@@ -61,13 +61,13 @@ $apiInstance = new Swagger\Client\Api\PublicApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$symbol = "\"btc\""; // string | The cryptocurrency symbol, provide `all` to get every symbol.
+$symbol = "btc"; // string | The cryptocurrency symbol.
 
 try {
-    $result = $apiInstance->v1PublicCurrentSymbolGet($symbol);
+    $result = $apiInstance->v1PublicPriceChangeSymbolGet($symbol);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling PublicApi->v1PublicCurrentSymbolGet: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling PublicApi->v1PublicPriceChangeSymbolGet: ', $e->getMessage(), PHP_EOL;
 }
 
 ?>
@@ -79,8 +79,8 @@ All URIs are relative to *https://api.investabit.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*PublicApi* | [**v1PublicCurrentSymbolGet**](docs/Api/PublicApi.md#v1publiccurrentsymbolget) | **GET** /v1/public/current/{symbol} | Current
 *PublicApi* | [**v1PublicPriceChangeSymbolGet**](docs/Api/PublicApi.md#v1publicpricechangesymbolget) | **GET** /v1/public/price-change/{symbol} | Price Change
+*PublicApi* | [**v1PublicPriceCurrentSymbolGet**](docs/Api/PublicApi.md#v1publicpricecurrentsymbolget) | **GET** /v1/public/price-current/{symbol} | Price Current
 *PublicApi* | [**v1PublicPriceHistorySymbolPeriodIntervalGet**](docs/Api/PublicApi.md#v1publicpricehistorysymbolperiodintervalget) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 *PublicApi* | [**v1PublicSymbolsGet**](docs/Api/PublicApi.md#v1publicsymbolsget) | **GET** /v1/public/symbols | Symbols
 *PublicApi* | [**v1PublicTrendSymbolGet**](docs/Api/PublicApi.md#v1publictrendsymbolget) | **GET** /v1/public/trend/{symbol} | Trend
@@ -88,16 +88,16 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [CurrentRoute](docs/Model/CurrentRoute.md)
  - [DefaultResponse](docs/Model/DefaultResponse.md)
  - [PriceChangeRoute](docs/Model/PriceChangeRoute.md)
+ - [PriceCurrentRoute](docs/Model/PriceCurrentRoute.md)
  - [PriceHistoryRoute](docs/Model/PriceHistoryRoute.md)
- - [PublicCurrentResponse](docs/Model/PublicCurrentResponse.md)
- - [PublicCurrentResponseData](docs/Model/PublicCurrentResponseData.md)
- - [PublicCurrentResponseDataCurrent](docs/Model/PublicCurrentResponseDataCurrent.md)
  - [PublicPriceChangeResponse](docs/Model/PublicPriceChangeResponse.md)
  - [PublicPriceChangeResponseData](docs/Model/PublicPriceChangeResponseData.md)
  - [PublicPriceChangeResponseDataPriceChange](docs/Model/PublicPriceChangeResponseDataPriceChange.md)
+ - [PublicPriceCurrentResponse](docs/Model/PublicPriceCurrentResponse.md)
+ - [PublicPriceCurrentResponseData](docs/Model/PublicPriceCurrentResponseData.md)
+ - [PublicPriceCurrentResponseDataCurrent](docs/Model/PublicPriceCurrentResponseDataCurrent.md)
  - [PublicPriceHistoryResponse](docs/Model/PublicPriceHistoryResponse.md)
  - [PublicPriceHistoryResponseData](docs/Model/PublicPriceHistoryResponseData.md)
  - [PublicPriceHistoryResponseDataHistory](docs/Model/PublicPriceHistoryResponseDataHistory.md)

@@ -1,13 +1,9 @@
-# PublicCurrentResponseDataCurrent
+# PublicPriceCurrentResponseData
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**symbol** | **string** |  | 
-**name** | **string** |  | 
-**price** | **float** |  | 
-**change_usd** | **float** |  | 
-**change_pct** | **float** |  | 
+**current** | [**\Swagger\Client\Model\PublicPriceCurrentResponseDataCurrent[]**](PublicPriceCurrentResponseDataCurrent.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
