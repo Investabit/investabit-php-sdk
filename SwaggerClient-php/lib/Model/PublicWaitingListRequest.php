@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicPriceCurrentResponse
+ * PublicWaitingListRequest
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicPriceCurrentResponse Class Doc Comment
+ * PublicWaitingListRequest Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
+class PublicWaitingListRequest implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Price Current Response';
+    protected static $swaggerModelName = 'Public Waiting List Request';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,11 +57,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'success' => 'bool',
-        'code' => 'int',
-        'status' => 'string',
-        'data' => '\Swagger\Client\Model\PublicPriceCurrentResponseData',
-        'errors' => 'object[]'
+        'name' => 'string',
+        'email' => 'string',
+        'service' => 'string',
+        'list_id' => 'string'
     ];
 
     /**
@@ -70,11 +69,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'success' => null,
-        'code' => null,
-        'status' => null,
-        'data' => null,
-        'errors' => null
+        'name' => null,
+        'email' => 'email',
+        'service' => null,
+        'list_id' => null
     ];
 
     /**
@@ -104,11 +102,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'success' => 'success',
-        'code' => 'code',
-        'status' => 'status',
-        'data' => 'data',
-        'errors' => 'errors'
+        'name' => 'name',
+        'email' => 'email',
+        'service' => 'service',
+        'list_id' => 'list_id'
     ];
 
     /**
@@ -117,11 +114,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'success' => 'setSuccess',
-        'code' => 'setCode',
-        'status' => 'setStatus',
-        'data' => 'setData',
-        'errors' => 'setErrors'
+        'name' => 'setName',
+        'email' => 'setEmail',
+        'service' => 'setService',
+        'list_id' => 'setListId'
     ];
 
     /**
@@ -130,11 +126,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'success' => 'getSuccess',
-        'code' => 'getCode',
-        'status' => 'getStatus',
-        'data' => 'getData',
-        'errors' => 'getErrors'
+        'name' => 'getName',
+        'email' => 'getEmail',
+        'service' => 'getService',
+        'list_id' => 'getListId'
     ];
 
     /**
@@ -197,11 +192,10 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
-        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
-        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
-        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['email'] = isset($data['email']) ? $data['email'] : null;
+        $this->container['service'] = isset($data['service']) ? $data['service'] : null;
+        $this->container['list_id'] = isset($data['list_id']) ? $data['list_id'] : null;
     }
 
     /**
@@ -213,17 +207,18 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['success'] === null) {
-            $invalidProperties[] = "'success' can't be null";
+        if ($this->container['email'] === null) {
+            $invalidProperties[] = "'email' can't be null";
         }
-        if ($this->container['code'] === null) {
-            $invalidProperties[] = "'code' can't be null";
+        if (!preg_match("/^[^@]+@[^@]+$/", $this->container['email'])) {
+            $invalidProperties[] = "invalid value for 'email', must be conform to the pattern /^[^@]+@[^@]+$/.";
         }
-        if ($this->container['status'] === null) {
-            $invalidProperties[] = "'status' can't be null";
+
+        if ($this->container['service'] === null) {
+            $invalidProperties[] = "'service' can't be null";
         }
-        if ($this->container['data'] === null) {
-            $invalidProperties[] = "'data' can't be null";
+        if ($this->container['list_id'] === null) {
+            $invalidProperties[] = "'list_id' can't be null";
         }
         return $invalidProperties;
     }
@@ -241,121 +236,102 @@ class PublicPriceCurrentResponse implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets success
-     *
-     * @return bool
-     */
-    public function getSuccess()
-    {
-        return $this->container['success'];
-    }
-
-    /**
-     * Sets success
-     *
-     * @param bool $success success
-     *
-     * @return $this
-     */
-    public function setSuccess($success)
-    {
-        $this->container['success'] = $success;
-
-        return $this;
-    }
-
-    /**
-     * Gets code
-     *
-     * @return int
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     *
-     * @param int $code code
-     *
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
-
-    /**
-     * Gets status
+     * Gets name
      *
      * @return string
      */
-    public function getStatus()
+    public function getName()
     {
-        return $this->container['status'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets status
+     * Sets name
      *
-     * @param string $status status
+     * @param string $name name
      *
      * @return $this
      */
-    public function setStatus($status)
+    public function setName($name)
     {
-        $this->container['status'] = $status;
+        $this->container['name'] = $name;
 
         return $this;
     }
 
     /**
-     * Gets data
+     * Gets email
      *
-     * @return \Swagger\Client\Model\PublicPriceCurrentResponseData
+     * @return string
      */
-    public function getData()
+    public function getEmail()
     {
-        return $this->container['data'];
+        return $this->container['email'];
     }
 
     /**
-     * Sets data
+     * Sets email
      *
-     * @param \Swagger\Client\Model\PublicPriceCurrentResponseData $data data
+     * @param string $email email
      *
      * @return $this
      */
-    public function setData($data)
+    public function setEmail($email)
     {
-        $this->container['data'] = $data;
+
+        if ((!preg_match("/^[^@]+@[^@]+$/", $email))) {
+            throw new \InvalidArgumentException("invalid value for $email when calling PublicWaitingListRequest., must conform to the pattern /^[^@]+@[^@]+$/.");
+        }
+
+        $this->container['email'] = $email;
 
         return $this;
     }
 
     /**
-     * Gets errors
+     * Gets service
      *
-     * @return object[]
+     * @return string
      */
-    public function getErrors()
+    public function getService()
     {
-        return $this->container['errors'];
+        return $this->container['service'];
     }
 
     /**
-     * Sets errors
+     * Sets service
      *
-     * @param object[] $errors errors
+     * @param string $service service
      *
      * @return $this
      */
-    public function setErrors($errors)
+    public function setService($service)
     {
-        $this->container['errors'] = $errors;
+        $this->container['service'] = $service;
+
+        return $this;
+    }
+
+    /**
+     * Gets list_id
+     *
+     * @return string
+     */
+    public function getListId()
+    {
+        return $this->container['list_id'];
+    }
+
+    /**
+     * Sets list_id
+     *
+     * @param string $list_id list_id
+     *
+     * @return $this
+     */
+    public function setListId($list_id)
+    {
+        $this->container['list_id'] = $list_id;
 
         return $this;
     }

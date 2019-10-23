@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicTrendResponseDataTrendTest
+ * PublicWaitingListRequestTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PublicTrendResponseDataTrendTest Class Doc Comment
+ * PublicWaitingListRequestTest Class Doc Comment
  *
  * @category    Class
- * @description PublicTrendResponseDataTrend
+ * @description PublicWaitingListRequest
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PublicTrendResponseDataTrendTest extends \PHPUnit_Framework_TestCase
+class PublicWaitingListRequestTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,37 @@ class PublicTrendResponseDataTrendTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PublicTrendResponseDataTrend"
+     * Test "PublicWaitingListRequest"
      */
-    public function testPublicTrendResponseDataTrend()
+    public function testPublicWaitingListRequest()
     {
     }
 
     /**
-     * Test attribute "time_start"
+     * Test attribute "name"
      */
-    public function testPropertyTimeStart()
+    public function testPropertyName()
     {
     }
 
     /**
-     * Test attribute "time_end"
+     * Test attribute "email"
      */
-    public function testPropertyTimeEnd()
+    public function testPropertyEmail()
     {
     }
 
     /**
-     * Test attribute "interval"
+     * Test attribute "service"
      */
-    public function testPropertyInterval()
+    public function testPropertyService()
     {
     }
 
     /**
-     * Test attribute "weighted_price"
+     * Test attribute "list_id"
      */
-    public function testPropertyWeightedPrice()
-    {
-    }
-
-    /**
-     * Test attribute "change_usd"
-     */
-    public function testPropertyChangeUsd()
-    {
-    }
-
-    /**
-     * Test attribute "change_pct"
-     */
-    public function testPropertyChangePct()
-    {
-    }
-
-    /**
-     * Test attribute "confidence"
-     */
-    public function testPropertyConfidence()
+    public function testPropertyListId()
     {
     }
 }

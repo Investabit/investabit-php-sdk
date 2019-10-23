@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicTrendResponseDataTrendTest
+ * WaitingListRouteTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PublicTrendResponseDataTrendTest Class Doc Comment
+ * WaitingListRouteTest Class Doc Comment
  *
  * @category    Class
- * @description PublicTrendResponseDataTrend
+ * @description WaitingListRoute
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PublicTrendResponseDataTrendTest extends \PHPUnit_Framework_TestCase
+class WaitingListRouteTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,58 +70,9 @@ class PublicTrendResponseDataTrendTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PublicTrendResponseDataTrend"
+     * Test "WaitingListRoute"
      */
-    public function testPublicTrendResponseDataTrend()
-    {
-    }
-
-    /**
-     * Test attribute "time_start"
-     */
-    public function testPropertyTimeStart()
-    {
-    }
-
-    /**
-     * Test attribute "time_end"
-     */
-    public function testPropertyTimeEnd()
-    {
-    }
-
-    /**
-     * Test attribute "interval"
-     */
-    public function testPropertyInterval()
-    {
-    }
-
-    /**
-     * Test attribute "weighted_price"
-     */
-    public function testPropertyWeightedPrice()
-    {
-    }
-
-    /**
-     * Test attribute "change_usd"
-     */
-    public function testPropertyChangeUsd()
-    {
-    }
-
-    /**
-     * Test attribute "change_pct"
-     */
-    public function testPropertyChangePct()
-    {
-    }
-
-    /**
-     * Test attribute "confidence"
-     */
-    public function testPropertyConfidence()
+    public function testWaitingListRoute()
     {
     }
 }

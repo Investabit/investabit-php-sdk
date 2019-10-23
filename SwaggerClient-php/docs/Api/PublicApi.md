@@ -9,6 +9,7 @@ Method | HTTP request | Description
 [**v1PublicPriceHistorySymbolPeriodIntervalGet**](PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
 [**v1PublicSymbolsGet**](PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 [**v1PublicTrendSymbolGet**](PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
+[**v1PublicWaitingListPost**](PublicApi.md#v1PublicWaitingListPost) | **POST** /v1/public/waiting-list | Waiting List
 
 
 # **v1PublicPriceChangeSymbolGet**
@@ -244,6 +245,55 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\PublicTrendResponse**](../Model/PublicTrendResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **v1PublicWaitingListPost**
+> \Swagger\Client\Model\DefaultResponse v1PublicWaitingListPost($body)
+
+Waiting List
+
+Subscribe a user to the waiting list, `name` is not required.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PublicApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Swagger\Client\Model\PublicWaitingListRequest(); // \Swagger\Client\Model\PublicWaitingListRequest | 
+
+try {
+    $result = $apiInstance->v1PublicWaitingListPost($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PublicApi->v1PublicWaitingListPost: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PublicWaitingListRequest**](../Model/PublicWaitingListRequest.md)|  | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\DefaultResponse**](../Model/DefaultResponse.md)
 
 ### Authorization
 
