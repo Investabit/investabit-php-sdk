@@ -1,12 +1,12 @@
-# PublicWaitingListRequest
+# PrivateAccuracyResponseData
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **string** |  | [optional] 
-**email** | **string** |  | 
-**service** | **string** |  | 
-**list_id** | **string** |  | 
+**rmse** | **float** |  | 
+**mae** | **float** |  | 
+**r2** | **float** |  | 
+**ci** | **float[]** |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
