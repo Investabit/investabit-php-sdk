@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**v1PublicPriceChangeSymbolGet**](PublicApi.md#v1PublicPriceChangeSymbolGet) | **GET** /v1/public/price-change/{symbol} | Price Change
 [**v1PublicPriceCurrentSymbolGet**](PublicApi.md#v1PublicPriceCurrentSymbolGet) | **GET** /v1/public/price-current/{symbol} | Price Current
 [**v1PublicPriceHistorySymbolPeriodIntervalGet**](PublicApi.md#v1PublicPriceHistorySymbolPeriodIntervalGet) | **GET** /v1/public/price-history/{symbol}/{period}/{interval} | Price History
+[**v1PublicSummaryGet**](PublicApi.md#v1PublicSummaryGet) | **GET** /v1/public/summary | Summary
 [**v1PublicSymbolsGet**](PublicApi.md#v1PublicSymbolsGet) | **GET** /v1/public/symbols | Symbols
 [**v1PublicTrendSymbolGet**](PublicApi.md#v1PublicTrendSymbolGet) | **GET** /v1/public/trend/{symbol} | Trend
 
@@ -150,6 +151,51 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\PublicPriceHistoryResponse**](../Model/PublicPriceHistoryResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **v1PublicSummaryGet**
+> \Swagger\Client\Model\PublicSummaryResponse v1PublicSummaryGet()
+
+Summary
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\Api\PublicApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+
+try {
+    $result = $apiInstance->v1PublicSummaryGet();
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PublicApi->v1PublicSummaryGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+[**\Swagger\Client\Model\PublicSummaryResponse**](../Model/PublicSummaryResponse.md)
 
 ### Authorization
 
