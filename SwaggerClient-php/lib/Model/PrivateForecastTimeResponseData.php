@@ -1,6 +1,6 @@
 <?php
 /**
- * PrivateForecastResponseData
+ * PrivateForecastTimeResponseData
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PrivateForecastResponseData Class Doc Comment
+ * PrivateForecastTimeResponseData Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PrivateForecastResponseData implements ModelInterface, ArrayAccess
+class PrivateForecastTimeResponseData implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Private Forecast Response_data';
+    protected static $swaggerModelName = 'Private Forecast Time Response_data';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'forecast' => '\Swagger\Client\Model\PrivateForecastResponseDataForecast[]'
+        'forecast_time' => 'float'
     ];
 
     /**
@@ -66,7 +66,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'forecast' => null
+        'forecast_time' => null
     ];
 
     /**
@@ -96,7 +96,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'forecast' => 'forecast'
+        'forecast_time' => 'forecast_time'
     ];
 
     /**
@@ -105,7 +105,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'forecast' => 'setForecast'
+        'forecast_time' => 'setForecastTime'
     ];
 
     /**
@@ -114,7 +114,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'forecast' => 'getForecast'
+        'forecast_time' => 'getForecastTime'
     ];
 
     /**
@@ -177,7 +177,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['forecast'] = isset($data['forecast']) ? $data['forecast'] : null;
+        $this->container['forecast_time'] = isset($data['forecast_time']) ? $data['forecast_time'] : null;
     }
 
     /**
@@ -189,8 +189,8 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['forecast'] === null) {
-            $invalidProperties[] = "'forecast' can't be null";
+        if ($this->container['forecast_time'] === null) {
+            $invalidProperties[] = "'forecast_time' can't be null";
         }
         return $invalidProperties;
     }
@@ -208,25 +208,25 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets forecast
+     * Gets forecast_time
      *
-     * @return \Swagger\Client\Model\PrivateForecastResponseDataForecast[]
+     * @return float
      */
-    public function getForecast()
+    public function getForecastTime()
     {
-        return $this->container['forecast'];
+        return $this->container['forecast_time'];
     }
 
     /**
-     * Sets forecast
+     * Sets forecast_time
      *
-     * @param \Swagger\Client\Model\PrivateForecastResponseDataForecast[] $forecast forecast
+     * @param float $forecast_time forecast_time
      *
      * @return $this
      */
-    public function setForecast($forecast)
+    public function setForecastTime($forecast_time)
     {
-        $this->container['forecast'] = $forecast;
+        $this->container['forecast_time'] = $forecast_time;
 
         return $this;
     }

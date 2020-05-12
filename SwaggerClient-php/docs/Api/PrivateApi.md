@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**v1PrivateAccuracySymbolIntervalPeriodGet**](PrivateApi.md#v1PrivateAccuracySymbolIntervalPeriodGet) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
 [**v1PrivateForecastSymbolIntervalGet**](PrivateApi.md#v1PrivateForecastSymbolIntervalGet) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
+[**v1PrivateForecastTimeSymbolIntervalPeriodGet**](PrivateApi.md#v1PrivateForecastTimeSymbolIntervalPeriodGet) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 [**v1PrivateTrendSymbolGet**](PrivateApi.md#v1PrivateTrendSymbolGet) | **GET** /v1/private/trend/{symbol} | Trend
 [**v1PrivateTrendTabularGet**](PrivateApi.md#v1PrivateTrendTabularGet) | **GET** /v1/private/trend-tabular | Trend Tabular
 
@@ -118,6 +119,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**\Swagger\Client\Model\PrivateForecastResponse**](../Model/PrivateForecastResponse.md)
+
+### Authorization
+
+[oauth2](../../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **v1PrivateForecastTimeSymbolIntervalPeriodGet**
+> \Swagger\Client\Model\PrivateForecastTimeResponse v1PrivateForecastTimeSymbolIntervalPeriodGet($symbol, $interval, $period, $cookie, $x_csrf)
+
+Forecast Time
+
+
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+// Configure OAuth2 access token for authorization: oauth2
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setAccessToken('YOUR_ACCESS_TOKEN');
+
+$apiInstance = new Swagger\Client\Api\PrivateApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$symbol = "btc"; // string | The cryptocurrency symbol.
+$interval = "1h"; // string | The forecast interval, 1h or 1d.
+$period = "7d"; // string | The period for computing the error bounds, typically 7d or 30d.
+$cookie = "csrf=b1820141-1bad-4a9c-93c0-52022817ce89"; // string | e.g. csrf=b1820141-1bad-4a9c-93c0-52022817ce89
+$x_csrf = "b1820141-1bad-4a9c-93c0-52022817ce89"; // string | e.g. b1820141-1bad-4a9c-93c0-52022817ce89
+
+try {
+    $result = $apiInstance->v1PrivateForecastTimeSymbolIntervalPeriodGet($symbol, $interval, $period, $cookie, $x_csrf);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PrivateApi->v1PrivateForecastTimeSymbolIntervalPeriodGet: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **symbol** | **string**| The cryptocurrency symbol. |
+ **interval** | **string**| The forecast interval, 1h or 1d. |
+ **period** | **string**| The period for computing the error bounds, typically 7d or 30d. |
+ **cookie** | **string**| e.g. csrf&#x3D;b1820141-1bad-4a9c-93c0-52022817ce89 | [optional]
+ **x_csrf** | **string**| e.g. b1820141-1bad-4a9c-93c0-52022817ce89 | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PrivateForecastTimeResponse**](../Model/PrivateForecastTimeResponse.md)
 
 ### Authorization
 

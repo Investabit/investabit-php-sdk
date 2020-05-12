@@ -89,6 +89,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *PrivateApi* | [**v1PrivateAccuracySymbolIntervalPeriodGet**](docs/Api/PrivateApi.md#v1privateaccuracysymbolintervalperiodget) | **GET** /v1/private/accuracy/{symbol}/{interval}/{period} | Accuracy
 *PrivateApi* | [**v1PrivateForecastSymbolIntervalGet**](docs/Api/PrivateApi.md#v1privateforecastsymbolintervalget) | **GET** /v1/private/forecast/{symbol}/{interval} | Forecast
+*PrivateApi* | [**v1PrivateForecastTimeSymbolIntervalPeriodGet**](docs/Api/PrivateApi.md#v1privateforecasttimesymbolintervalperiodget) | **GET** /v1/private/forecast-time/{symbol}/{interval}/{period} | Forecast Time
 *PrivateApi* | [**v1PrivateTrendSymbolGet**](docs/Api/PrivateApi.md#v1privatetrendsymbolget) | **GET** /v1/private/trend/{symbol} | Trend
 *PrivateApi* | [**v1PrivateTrendTabularGet**](docs/Api/PrivateApi.md#v1privatetrendtabularget) | **GET** /v1/private/trend-tabular | Trend Tabular
 *PublicApi* | [**v1PublicPriceChangeSymbolGet**](docs/Api/PublicApi.md#v1publicpricechangesymbolget) | **GET** /v1/public/price-change/{symbol} | Price Change
@@ -104,6 +105,7 @@ Class | Method | HTTP request | Description
  - [AccuracyRoute](docs/Model/AccuracyRoute.md)
  - [DefaultResponse](docs/Model/DefaultResponse.md)
  - [ForecastRoute](docs/Model/ForecastRoute.md)
+ - [ForecastTimeRoute](docs/Model/ForecastTimeRoute.md)
  - [PriceChangeRoute](docs/Model/PriceChangeRoute.md)
  - [PriceCurrentRoute](docs/Model/PriceCurrentRoute.md)
  - [PriceHistoryRoute](docs/Model/PriceHistoryRoute.md)
@@ -112,6 +114,8 @@ Class | Method | HTTP request | Description
  - [PrivateForecastResponse](docs/Model/PrivateForecastResponse.md)
  - [PrivateForecastResponseData](docs/Model/PrivateForecastResponseData.md)
  - [PrivateForecastResponseDataForecast](docs/Model/PrivateForecastResponseDataForecast.md)
+ - [PrivateForecastTimeResponse](docs/Model/PrivateForecastTimeResponse.md)
+ - [PrivateForecastTimeResponseData](docs/Model/PrivateForecastTimeResponseData.md)
  - [PrivateTrendTabularResponse](docs/Model/PrivateTrendTabularResponse.md)
  - [PrivateTrendTabularResponseData](docs/Model/PrivateTrendTabularResponseData.md)
  - [PrivateTrendTabularResponseDataTrendTabular](docs/Model/PrivateTrendTabularResponseDataTrendTabular.md)

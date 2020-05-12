@@ -1,6 +1,6 @@
 <?php
 /**
- * PrivateForecastResponseData
+ * PrivateForecastTimeResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PrivateForecastResponseData Class Doc Comment
+ * PrivateForecastTimeResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PrivateForecastResponseData implements ModelInterface, ArrayAccess
+class PrivateForecastTimeResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Private Forecast Response_data';
+    protected static $swaggerModelName = 'Private Forecast Time Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'forecast' => '\Swagger\Client\Model\PrivateForecastResponseDataForecast[]'
+        'success' => 'bool',
+        'code' => 'int',
+        'status' => 'string',
+        'data' => '\Swagger\Client\Model\PrivateForecastTimeResponseData',
+        'errors' => 'object[]'
     ];
 
     /**
@@ -66,7 +70,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'forecast' => null
+        'success' => null,
+        'code' => null,
+        'status' => null,
+        'data' => null,
+        'errors' => null
     ];
 
     /**
@@ -96,7 +104,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'forecast' => 'forecast'
+        'success' => 'success',
+        'code' => 'code',
+        'status' => 'status',
+        'data' => 'data',
+        'errors' => 'errors'
     ];
 
     /**
@@ -105,7 +117,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'forecast' => 'setForecast'
+        'success' => 'setSuccess',
+        'code' => 'setCode',
+        'status' => 'setStatus',
+        'data' => 'setData',
+        'errors' => 'setErrors'
     ];
 
     /**
@@ -114,7 +130,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'forecast' => 'getForecast'
+        'success' => 'getSuccess',
+        'code' => 'getCode',
+        'status' => 'getStatus',
+        'data' => 'getData',
+        'errors' => 'getErrors'
     ];
 
     /**
@@ -177,7 +197,11 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['forecast'] = isset($data['forecast']) ? $data['forecast'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -189,8 +213,17 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['forecast'] === null) {
-            $invalidProperties[] = "'forecast' can't be null";
+        if ($this->container['success'] === null) {
+            $invalidProperties[] = "'success' can't be null";
+        }
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
+        }
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -208,25 +241,121 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets forecast
+     * Gets success
      *
-     * @return \Swagger\Client\Model\PrivateForecastResponseDataForecast[]
+     * @return bool
      */
-    public function getForecast()
+    public function getSuccess()
     {
-        return $this->container['forecast'];
+        return $this->container['success'];
     }
 
     /**
-     * Sets forecast
+     * Sets success
      *
-     * @param \Swagger\Client\Model\PrivateForecastResponseDataForecast[] $forecast forecast
+     * @param bool $success success
      *
      * @return $this
      */
-    public function setForecast($forecast)
+    public function setSuccess($success)
     {
-        $this->container['forecast'] = $forecast;
+        $this->container['success'] = $success;
+
+        return $this;
+    }
+
+    /**
+     * Gets code
+     *
+     * @return int
+     */
+    public function getCode()
+    {
+        return $this->container['code'];
+    }
+
+    /**
+     * Sets code
+     *
+     * @param int $code code
+     *
+     * @return $this
+     */
+    public function setCode($code)
+    {
+        $this->container['code'] = $code;
+
+        return $this;
+    }
+
+    /**
+     * Gets status
+     *
+     * @return string
+     */
+    public function getStatus()
+    {
+        return $this->container['status'];
+    }
+
+    /**
+     * Sets status
+     *
+     * @param string $status status
+     *
+     * @return $this
+     */
+    public function setStatus($status)
+    {
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Swagger\Client\Model\PrivateForecastTimeResponseData
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Swagger\Client\Model\PrivateForecastTimeResponseData $data data
+     *
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets errors
+     *
+     * @return object[]
+     */
+    public function getErrors()
+    {
+        return $this->container['errors'];
+    }
+
+    /**
+     * Sets errors
+     *
+     * @param object[] $errors errors
+     *
+     * @return $this
+     */
+    public function setErrors($errors)
+    {
+        $this->container['errors'] = $errors;
 
         return $this;
     }

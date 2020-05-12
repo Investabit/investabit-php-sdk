@@ -1,6 +1,6 @@
 <?php
 /**
- * PrivateForecastResponseData
+ * ForecastTimeRoute
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PrivateForecastResponseData Class Doc Comment
+ * ForecastTimeRoute Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PrivateForecastResponseData implements ModelInterface, ArrayAccess
+class ForecastTimeRoute implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Private Forecast Response_data';
+    protected static $swaggerModelName = 'Forecast Time Route';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,7 +57,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'forecast' => '\Swagger\Client\Model\PrivateForecastResponseDataForecast[]'
+        
     ];
 
     /**
@@ -66,7 +66,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'forecast' => null
+        
     ];
 
     /**
@@ -96,7 +96,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'forecast' => 'forecast'
+        
     ];
 
     /**
@@ -105,7 +105,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'forecast' => 'setForecast'
+        
     ];
 
     /**
@@ -114,7 +114,7 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'forecast' => 'getForecast'
+        
     ];
 
     /**
@@ -177,7 +177,6 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['forecast'] = isset($data['forecast']) ? $data['forecast'] : null;
     }
 
     /**
@@ -189,9 +188,6 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
-        if ($this->container['forecast'] === null) {
-            $invalidProperties[] = "'forecast' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -206,30 +202,6 @@ class PrivateForecastResponseData implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets forecast
-     *
-     * @return \Swagger\Client\Model\PrivateForecastResponseDataForecast[]
-     */
-    public function getForecast()
-    {
-        return $this->container['forecast'];
-    }
-
-    /**
-     * Sets forecast
-     *
-     * @param \Swagger\Client\Model\PrivateForecastResponseDataForecast[] $forecast forecast
-     *
-     * @return $this
-     */
-    public function setForecast($forecast)
-    {
-        $this->container['forecast'] = $forecast;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *

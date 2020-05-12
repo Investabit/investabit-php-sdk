@@ -1,6 +1,6 @@
 <?php
 /**
- * PrivateTrendTabularResponseDataTest
+ * PrivateForecastTimeResponseTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PrivateTrendTabularResponseDataTest Class Doc Comment
+ * PrivateForecastTimeResponseTest Class Doc Comment
  *
  * @category    Class
- * @description PrivateTrendTabularResponseData
+ * @description PrivateForecastTimeResponse
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PrivateTrendTabularResponseDataTest extends \PHPUnit_Framework_TestCase
+class PrivateForecastTimeResponseTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,44 @@ class PrivateTrendTabularResponseDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PrivateTrendTabularResponseData"
+     * Test "PrivateForecastTimeResponse"
      */
-    public function testPrivateTrendTabularResponseData()
+    public function testPrivateForecastTimeResponse()
     {
     }
 
     /**
-     * Test attribute "trend_tabular"
+     * Test attribute "success"
      */
-    public function testPropertyTrendTabular()
+    public function testPropertySuccess()
+    {
+    }
+
+    /**
+     * Test attribute "code"
+     */
+    public function testPropertyCode()
+    {
+    }
+
+    /**
+     * Test attribute "status"
+     */
+    public function testPropertyStatus()
+    {
+    }
+
+    /**
+     * Test attribute "data"
+     */
+    public function testPropertyData()
+    {
+    }
+
+    /**
+     * Test attribute "errors"
+     */
+    public function testPropertyErrors()
     {
     }
 }

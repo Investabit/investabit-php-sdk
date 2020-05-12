@@ -1,6 +1,6 @@
 <?php
 /**
- * PrivateTrendTabularResponseDataTest
+ * ForecastTimeRouteTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * PrivateTrendTabularResponseDataTest Class Doc Comment
+ * ForecastTimeRouteTest Class Doc Comment
  *
  * @category    Class
- * @description PrivateTrendTabularResponseData
+ * @description ForecastTimeRoute
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class PrivateTrendTabularResponseDataTest extends \PHPUnit_Framework_TestCase
+class ForecastTimeRouteTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,16 +70,9 @@ class PrivateTrendTabularResponseDataTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "PrivateTrendTabularResponseData"
+     * Test "ForecastTimeRoute"
      */
-    public function testPrivateTrendTabularResponseData()
-    {
-    }
-
-    /**
-     * Test attribute "trend_tabular"
-     */
-    public function testPropertyTrendTabular()
+    public function testForecastTimeRoute()
     {
     }
 }
