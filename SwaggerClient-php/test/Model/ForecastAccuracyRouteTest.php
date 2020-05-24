@@ -1,6 +1,6 @@
 <?php
 /**
- * TrendRouteTest
+ * ForecastAccuracyRouteTest
  *
  * PHP version 5
  *
@@ -30,15 +30,15 @@
 namespace Swagger\Client;
 
 /**
- * TrendRouteTest Class Doc Comment
+ * ForecastAccuracyRouteTest Class Doc Comment
  *
  * @category    Class
- * @description TrendRoute
+ * @description ForecastAccuracyRoute
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class TrendRouteTest extends \PHPUnit_Framework_TestCase
+class ForecastAccuracyRouteTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -70,9 +70,9 @@ class TrendRouteTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "TrendRoute"
+     * Test "ForecastAccuracyRoute"
      */
-    public function testTrendRoute()
+    public function testForecastAccuracyRoute()
     {
     }
 }

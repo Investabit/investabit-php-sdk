@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicPriceHistoryResponseDataPriceHistory
+ * PrivateForecastAccuracyResponse
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicPriceHistoryResponseDataPriceHistory Class Doc Comment
+ * PrivateForecastAccuracyResponse Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, ArrayAccess
+class PrivateForecastAccuracyResponse implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Price History Response_data_price_history';
+    protected static $swaggerModelName = 'Private Forecast Accuracy Response';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'symbol' => 'string',
-        'name' => 'string',
-        'history' => '\Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[]'
+        'success' => 'bool',
+        'code' => 'int',
+        'status' => 'string',
+        'data' => '\Swagger\Client\Model\PrivateForecastAccuracyResponseData',
+        'errors' => 'object[]'
     ];
 
     /**
@@ -68,9 +70,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'symbol' => null,
-        'name' => null,
-        'history' => null
+        'success' => null,
+        'code' => null,
+        'status' => null,
+        'data' => null,
+        'errors' => null
     ];
 
     /**
@@ -100,9 +104,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'symbol' => 'symbol',
-        'name' => 'name',
-        'history' => 'history'
+        'success' => 'success',
+        'code' => 'code',
+        'status' => 'status',
+        'data' => 'data',
+        'errors' => 'errors'
     ];
 
     /**
@@ -111,9 +117,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'symbol' => 'setSymbol',
-        'name' => 'setName',
-        'history' => 'setHistory'
+        'success' => 'setSuccess',
+        'code' => 'setCode',
+        'status' => 'setStatus',
+        'data' => 'setData',
+        'errors' => 'setErrors'
     ];
 
     /**
@@ -122,9 +130,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'symbol' => 'getSymbol',
-        'name' => 'getName',
-        'history' => 'getHistory'
+        'success' => 'getSuccess',
+        'code' => 'getCode',
+        'status' => 'getStatus',
+        'data' => 'getData',
+        'errors' => 'getErrors'
     ];
 
     /**
@@ -187,9 +197,11 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['symbol'] = isset($data['symbol']) ? $data['symbol'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['history'] = isset($data['history']) ? $data['history'] : null;
+        $this->container['success'] = isset($data['success']) ? $data['success'] : null;
+        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
+        $this->container['status'] = isset($data['status']) ? $data['status'] : null;
+        $this->container['data'] = isset($data['data']) ? $data['data'] : null;
+        $this->container['errors'] = isset($data['errors']) ? $data['errors'] : null;
     }
 
     /**
@@ -201,14 +213,17 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
     {
         $invalidProperties = [];
 
-        if ($this->container['symbol'] === null) {
-            $invalidProperties[] = "'symbol' can't be null";
+        if ($this->container['success'] === null) {
+            $invalidProperties[] = "'success' can't be null";
         }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
+        if ($this->container['code'] === null) {
+            $invalidProperties[] = "'code' can't be null";
         }
-        if ($this->container['history'] === null) {
-            $invalidProperties[] = "'history' can't be null";
+        if ($this->container['status'] === null) {
+            $invalidProperties[] = "'status' can't be null";
+        }
+        if ($this->container['data'] === null) {
+            $invalidProperties[] = "'data' can't be null";
         }
         return $invalidProperties;
     }
@@ -226,73 +241,121 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
 
 
     /**
-     * Gets symbol
+     * Gets success
      *
-     * @return string
+     * @return bool
      */
-    public function getSymbol()
+    public function getSuccess()
     {
-        return $this->container['symbol'];
+        return $this->container['success'];
     }
 
     /**
-     * Sets symbol
+     * Sets success
      *
-     * @param string $symbol symbol
+     * @param bool $success success
      *
      * @return $this
      */
-    public function setSymbol($symbol)
+    public function setSuccess($success)
     {
-        $this->container['symbol'] = $symbol;
+        $this->container['success'] = $success;
 
         return $this;
     }
 
     /**
-     * Gets name
+     * Gets code
      *
-     * @return string
+     * @return int
      */
-    public function getName()
+    public function getCode()
     {
-        return $this->container['name'];
+        return $this->container['code'];
     }
 
     /**
-     * Sets name
+     * Sets code
      *
-     * @param string $name name
+     * @param int $code code
      *
      * @return $this
      */
-    public function setName($name)
+    public function setCode($code)
     {
-        $this->container['name'] = $name;
+        $this->container['code'] = $code;
 
         return $this;
     }
 
     /**
-     * Gets history
+     * Gets status
      *
-     * @return \Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[]
+     * @return string
      */
-    public function getHistory()
+    public function getStatus()
     {
-        return $this->container['history'];
+        return $this->container['status'];
     }
 
     /**
-     * Sets history
+     * Sets status
      *
-     * @param \Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[] $history history
+     * @param string $status status
      *
      * @return $this
      */
-    public function setHistory($history)
+    public function setStatus($status)
     {
-        $this->container['history'] = $history;
+        $this->container['status'] = $status;
+
+        return $this;
+    }
+
+    /**
+     * Gets data
+     *
+     * @return \Swagger\Client\Model\PrivateForecastAccuracyResponseData
+     */
+    public function getData()
+    {
+        return $this->container['data'];
+    }
+
+    /**
+     * Sets data
+     *
+     * @param \Swagger\Client\Model\PrivateForecastAccuracyResponseData $data data
+     *
+     * @return $this
+     */
+    public function setData($data)
+    {
+        $this->container['data'] = $data;
+
+        return $this;
+    }
+
+    /**
+     * Gets errors
+     *
+     * @return object[]
+     */
+    public function getErrors()
+    {
+        return $this->container['errors'];
+    }
+
+    /**
+     * Sets errors
+     *
+     * @param object[] $errors errors
+     *
+     * @return $this
+     */
+    public function setErrors($errors)
+    {
+        $this->container['errors'] = $errors;
 
         return $this;
     }

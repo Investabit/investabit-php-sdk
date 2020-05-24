@@ -1,6 +1,6 @@
 <?php
 /**
- * PublicPriceHistoryResponseDataPriceHistory
+ * ForecastAccuracyRoute
  *
  * PHP version 5
  *
@@ -33,14 +33,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PublicPriceHistoryResponseDataPriceHistory Class Doc Comment
+ * ForecastAccuracyRoute Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, ArrayAccess
+class ForecastAccuracyRoute implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -49,7 +49,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Public Price History Response_data_price_history';
+    protected static $swaggerModelName = 'Forecast Accuracy Route';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -57,9 +57,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'symbol' => 'string',
-        'name' => 'string',
-        'history' => '\Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[]'
+        
     ];
 
     /**
@@ -68,9 +66,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'symbol' => null,
-        'name' => null,
-        'history' => null
+        
     ];
 
     /**
@@ -100,9 +96,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $attributeMap = [
-        'symbol' => 'symbol',
-        'name' => 'name',
-        'history' => 'history'
+        
     ];
 
     /**
@@ -111,9 +105,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $setters = [
-        'symbol' => 'setSymbol',
-        'name' => 'setName',
-        'history' => 'setHistory'
+        
     ];
 
     /**
@@ -122,9 +114,7 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      * @var string[]
      */
     protected static $getters = [
-        'symbol' => 'getSymbol',
-        'name' => 'getName',
-        'history' => 'getHistory'
+        
     ];
 
     /**
@@ -187,9 +177,6 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
      */
     public function __construct(array $data = null)
     {
-        $this->container['symbol'] = isset($data['symbol']) ? $data['symbol'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['history'] = isset($data['history']) ? $data['history'] : null;
     }
 
     /**
@@ -201,15 +188,6 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
     {
         $invalidProperties = [];
 
-        if ($this->container['symbol'] === null) {
-            $invalidProperties[] = "'symbol' can't be null";
-        }
-        if ($this->container['name'] === null) {
-            $invalidProperties[] = "'name' can't be null";
-        }
-        if ($this->container['history'] === null) {
-            $invalidProperties[] = "'history' can't be null";
-        }
         return $invalidProperties;
     }
 
@@ -224,78 +202,6 @@ class PublicPriceHistoryResponseDataPriceHistory implements ModelInterface, Arra
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets symbol
-     *
-     * @return string
-     */
-    public function getSymbol()
-    {
-        return $this->container['symbol'];
-    }
-
-    /**
-     * Sets symbol
-     *
-     * @param string $symbol symbol
-     *
-     * @return $this
-     */
-    public function setSymbol($symbol)
-    {
-        $this->container['symbol'] = $symbol;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets history
-     *
-     * @return \Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[]
-     */
-    public function getHistory()
-    {
-        return $this->container['history'];
-    }
-
-    /**
-     * Sets history
-     *
-     * @param \Swagger\Client\Model\PublicPriceHistoryResponseDataHistory[] $history history
-     *
-     * @return $this
-     */
-    public function setHistory($history)
-    {
-        $this->container['history'] = $history;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      *
